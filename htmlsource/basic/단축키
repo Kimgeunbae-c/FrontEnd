@@ -1,0 +1,15 @@
+    <h1 id="title">css 기본 문법</h1>></h1>
+    <h1 id="title"></h1>
+    <!-- h1# title -->
+    <ht class="title"></ht>
+    <!-- h1.title -->
+    <h1 id="title" class="title"></h1>
+    <!-- h1#title.title-->
+    <div id="header"></div>
+    <!-- #deaver -->
+    <ul>
+      <!-- ul>li*3 -->
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>

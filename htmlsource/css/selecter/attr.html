@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* [target] {
+        text-decoration: none;
+      } */
+      /* [target="_blank"] {
+        text-decoration: none;
+      } */
+      [title~="bird"] {
+        border: 5px solid green;
+      }
+      [class^="test"] {
+        background-color: salmon;
+      }
+      [class$="test"] {
+        background-color: magenta;
+      }
+      [class*="test"] {
+        background-color: rgb(147, 228, 41);
+      }
+      /* font-weight : bold,  border-radius:20px, padding:10px*/
+      [class*="btn"] {
+        font-weight: bold;
+        border-radius: 20px;
+        padding: 10px;
+      }
+      [class$="success"] {
+        color: green;
+      }
+      [class$="danger"] {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a href="#" target="_blank">google</a></li>
+      <li><a href="#" target="_blank">naver</a></li>
+      <li><a href="#" target="_self">daum</a></li>
+    </ul>
+    <img src="../../image/다운로드.jpg" alt="" title="pretty bird" />
+    <img src="../../image/다운로드.jpg" alt="" title="sound bird" />
+    <img src="../../image/다운로드.jpg" alt="" title="no bird" />
+    <div class="testing">First div</div>
+    <div class="second_test">Second div</div>
+    <div class="test">Third div</div>
+    <div class="test_ex">Fourth div</div>
+    <button class="btn-success">Success</button>
+    <button class="btn-danger">Danger</button>
+    <button>Normal</button>
+  </body>
+</html>
