@@ -4,35 +4,64 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        border-style: solid;
+      }
+
+      tr,
+      td {
+        border: 1px solid black;
+        width: 100px;
+        height: 30px;
+      }
+      .main {
+        background-image: url(../../image/dish1.jpg);
+        background-size: cover;
+      }
+      .main2 {
+        font-size: 20px;
+        font-weight: bold;
+        font-family: "Courier New", Courier, monospace;
+      }
+      .num1,
+      .num2,
+      .num3,
+      .num4 {
+        background-color: black;
+        color: white;
+      }
+    </style>
   </head>
   <body>
-    <table border="1" width="600">
+    <table>
       <tr>
-        <td rowspan="3">사진</td>
-        <td colspan="4"><h2>이력서</h2></td>
+        <td class="main" rowspan="3"></td>
+        <td class="main2" colspan="4"><h2>이력서</h2></td>
       </tr>
       <tr>
-        <td rowspan="2">성명</td>
-        <td colspan="2" rowspan="2">" "</td>
+        <td class="main3" rowspan="2">성명</td>
+        <td colspan="2" rowspan="2" style="width: 25%"></td>
         <td>생년월일</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
       </tr>
       <tr>
-        <td>이메일</td>
+        <td class="num1">이메일</td>
         <td colspan="4"></td>
       </tr>
       <tr>
-        <td>현주소</td>
+        <td class="num2">현주소</td>
         <td colspan="4"></td>
       </tr>
       <tr>
-        <td>연락처</td>
+        <td class="num3">연락처</td>
         <td colspan="4"></td>
       </tr>
       <tr>
-        <td>기간</td>
+        <td class="num4">기간</td>
         <td colspan="2">학력사항</td>
         <td colspan="2">비고</td>
       </tr>
