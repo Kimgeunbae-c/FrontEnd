@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <button type="button">Turn on the light</button>
+      <img src="./../../../../image/pic_bulboff.gif" alt="" />
+      <button type="button">Turn off the light</button>
+    </div>
+    <script>
+      // img 클릭 시 on <=> off
+
+      const img = document.querySelector("img");
+      let mode = false;
+      img.addEventListener("click", (e) => {
+        if (!mode) {
+          img.src = "./../../../../image/pic_bulbon.gif";
+          mode = true;
+        } else {
+          img.src = "./../../../../image/pic_bulboff.gif";
+          mode = false;
+        }
+      });
+    </script>
+  </body>
+</html>
