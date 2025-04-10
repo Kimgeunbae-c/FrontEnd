@@ -1,0 +1,43 @@
+/* border 포함한 크기 지정 */
+* {
+    box-sizing: border-box; /* border 포함한 크기 지정 */ 
+}
+
+/* ul.list : 블릿기호 없애기, 모든 여백 0, 아랫쪽 테두리 : 1px solid #ccc */
+ul.list {
+    list-style-type: none; /* ul.list : 블릿기호 없애기 */
+    margin: 0; /* ul.list : 모든 여백 0 */
+    padding: 0; /* ul.list : 모든 여백 0 */
+    border-bottom: 1px solid #ccc; /* ul.list : 아랫쪽 테두리 : 1px solid #ccc */
+  }
+
+  /* 옆으로 배치 : 1) float 2) inline-block 3) flex */
+
+/* .tab-button : 안쪽여백 : 위, 아래 10, 왼오 20, 옆으로 배치, 글자색 : 회색, 마우스 올리면 손모양 */
+
+.tab-button {
+    display: inline-block;
+    padding: 10px 20px; /* .tab-button : 안쪽여백 : 위, 아래 10, 왼오 20 */
+    color: #999; /* .tab-button : 글자색 : 회색 */
+    cursor: pointer; /* .tab-button : 마우스 올리면 손모양 */
+margin-right: -1px;  
+margin-bottom: -1px;  
+}
+
+.orange{
+    border-top : 2px solid orange;
+    border-right : 2px solid #ccc;
+    border-bottom : 2px solid white;
+    border-left : 2px solid #ccc;
+    color : black;
+    margin-top : -2px;
+}       
+
+.tab-content{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+  
