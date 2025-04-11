@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      .container {
+        display: flex;
+        background-color: lightblue;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+      }
+      .container li {
+        list-style: none;
+        margin: 0;
+        width: 25%;
+        cursor: pointer;
+      }
+      div {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="container">
+      <li>메뉴1</li>
+      <li>메뉴2</li>
+      <li>메뉴3</li>
+      <li>메뉴4</li>
+    </ul>
+    <h1>Title</h1>
+    <div></div>
+    <script>
+      document.querySelector("ul :nth-child(3)").addEventListener("click", () => {
+        fetch("https://Kimgeunbae-c.github.io/data/version2.json")
+          .then((res) => {
+            // res.ok === 200
+            //        === 400 (404- 경로 틀림, 403-권한없음)
+            //        === 500 (서버에러)
+            if (!res.ok) throw new Error("경로를 확인해 주세요");
+            return res.json();
+          })
+          .then((data) => {
+            console.log(data);
+            // console.log(data.codename);
+            let result = `<ul>`;
+            data.forEach((item) => {
+              result += `<li>version : ${item.version}</li>`;
+              result += `<li>codename : ${item.codename}</li>`;
+            });
+            result += `</ul>`;
+            document.querySelector("div").innerHTML = result;
+          });
+      });
+    </script>
+  </body>
+</html>
